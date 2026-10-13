@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FIELDERA English Academy - Lesson 02 Interactive Homework</title>
+  <style>
+    :root {
+      --primary: #1e3a8a;
+      --primary-light: #3b82f6;
+      --secondary: #0d9488;
+      --accent: #f59e0b;
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --text: #1e293b;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --success: #16a34a;
+      --error: #dc2626;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--primary), #1e293b);
+      color: white;
+      padding: 30px 25px;
+      border-radius: 16px;
+      margin-bottom: 25px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    }
+
+    header .badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.2);
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 10px;
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+      margin-bottom: 6px;
+    }
+
+    header p {
+      color: #cbd5e1;
+      font-size: 0.95rem;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: 14px;
+      padding: 24px;
+      margin-bottom: 22px;
+      border: 1px solid var(--border);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 18px;
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 10px;
+    }
+
+    .card-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #eff6ff;
+      color: var(--primary);
+      font-weight: bold;
+    }
+
+    .card-title {
+      font-size: 1.25rem;
+      color: var(--primary);
+      font-weight: 700;
+    }
+
+    /* Reading section */
+    .reading-box {
+      background: #f8fafc;
+      border-left: 4px solid var(--primary-light);
+      padding: 18px;
+      border-radius: 0 10px 10px 0;
+      font-size: 1.05rem;
+      line-height: 1.75;
+      margin-bottom: 20px;
+    }
+
+    .chunk-highlight {
+      background-color: #fef08a;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-weight: 600;
+      color: #854d0e;
+    }
+
+    /* Question styles */
+    .question-item {
+      margin-bottom: 18px;
+      padding: 12px 14px;
+      border-radius: 8px;
+      background: #fdfdfd;
+      border: 1px solid #f1f5f9;
+    }
+
+    .question-item p {
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: #334155;
+    }
+
+    .options {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .option-label {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 12px;
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .option-label:hover {
+      background: #eff6ff;
+      border-color: var(--primary-light);
+    }
+
+    .option-label input[type="radio"] {
+      cursor: pointer;
+    }
+
+    /* Vocabulary & Chunk Match */
+    .grid-two {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+
+    @media (max-width: 650px) {
+      .grid-two {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .fill-box {
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      font-size: 1rem;
+    }
+
+    select, input[type="text"] {
+      padding: 8px 12px;
+      border: 1.5px solid var(--border);
+      border-radius: 6px;
+      font-size: 0.95rem;
+      outline: none;
+      transition: border 0.2s;
+    }
+
+    select:focus, input[type="text"]:focus {
+      border-color: var(--primary-light);
+    }
+
+    /* Writing Section */
+    textarea {
+      width: 100%;
+      min-height: 130px;
+      padding: 12px;
+      border: 1.5px solid var(--border);
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-family: inherit;
+      resize: vertical;
+      margin-top: 8px;
+    }
+
+    textarea:focus {
+      outline: none;
+      border-color: var(--primary-light);
+    }
+
+    .formula-tag {
+      display: inline-block;
+      background: #e0f2fe;
+      color: #0369a1;
+      padding: 3px 8px;
+      border-radius: 5px;
+      font-size: 0.85rem;
+      font-family: monospace;
+      margin-bottom: 12px;
+    }
+
+    /* Actions and results */
+    .btn-submit {
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 14px 28px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border-radius: 10px;
+      cursor: pointer;
+      width: 100%;
+      transition: background 0.2s;
+      box-shadow: 0 4px 10px rgba(30, 58, 138, 0.2);
+    }
+
+    .btn-submit:hover {
+      background: #1d4ed8;
+    }
+
+    #results-card {
+      display: none;
+      border: 2px solid var(--primary-light);
+      background: #f0fdf4;
+      margin-top: 25px;
+    }
+
+    .score-banner {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #15803d;
+      margin-bottom: 10px;
+    }
+
+    .feedback-correct {
+      color: var(--success);
+      font-weight: 600;
+    }
+
+    .feedback-wrong {
+      color: var(--error);
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <header>
+    <div class="badge">FIELDERA English Academy &bull; Lesson 02</div>
+    <h1>Homework & Interactive Practice</h1>
+    <p>Theme: Family &amp; Friendship | Level: A2 | Target Skills: Reading, Vocabulary, Chunks, Grammar &amp; Writing</p>
+  </header>
+
+  <form id="homework-form">
+
+    <!-- 1. READING & COMPREHENSION -->
+    <section class="card">
+      <div class="card-header">
+        <div class="card-icon">1</div>
+        <div class="card-title">Reading Passage: A Friendship That Lasts</div>
+      </div>
+      
+      <div class="reading-box">
+        <p>"My name is Adam, and my best friend is Yusuf. We have known each other for many years. We met at school, and we still <span class="chunk-highlight">keep in touch</span>.</p>
+        <p style="margin-top:8px;">Yusuf is <span class="chunk-highlight">more outgoing than</span> me, but we <span class="chunk-highlight">have a lot in common</span>. We both enjoy reading, travelling and spending time with our families.</p>
+        <p style="margin-top:8px;">We talk on the phone every week. I can always <span class="chunk-highlight">count on</span> Yusuf when I need help. A good friendship is about trust and respect."</p>
+      </div>
+
+      <div class="question-item">
+        <p>1. How do Adam and Yusuf stay connected?</p>
+        <div class="options">
+          <label class="option-label"><input type="radio" name="rc1" value="A"> A) They live in the same house.</label>
+          <label class="option-label"><input type="radio" name="rc1" value="B"> B) They talk on the phone every week and keep in touch.</label>
+          <label class="option-label"><input type="radio" name="rc1" value="C"> C) They only meet during vacations.</label>
+        </div>
+      </div>
+
+      <div class="question-item">
+        <p>2. How is Yusuf different from Adam?</p>
+        <div class="options">
+          <label class="option-label"><input type="radio" name="rc2" value="A"> A) Yusuf is more outgoing than Adam.</label>
+          <label class="option-label"><input type="radio" name="rc2" value="B"> B) Yusuf is quieter than Adam.</label>
+          <label class="option-label"><input type="radio" name="rc2" value="C"> C) Yusuf does not like travelling.</label>
+        </div>
+      </div>
+
+      <div class="question-item">
+        <p>3. What is a core foundation of a good friendship according to Adam?</p>
+        <div class="options">
+          <label class="option-label"><input type="radio" name="rc3" value="A"> A) Working at the same company</label>
+          <label class="option-label"><input type="radio" name="rc3" value="B"> B) Having the exact same personality</label>
+          <label class="option-label"><input type="radio" name="rc3" value="C"> C) Trust and mutual respect</label>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. VOCABULARY & CHUNKS -->
+    <section class="card">
+      <div class="card-header">
+        <div class="card-icon">2</div>
+        <div class="card-title">Vocabulary &amp; Target Chunks</div>
+      </div>
+
+      <p style="margin-bottom: 14px; color: var(--text-muted);">Fill in the blanks with the correct preposition or target chunk.</p>
+
+      <div class="fill-box">
+        <span>1. I get along well</span>
+        <select id="chunk1">
+          <option value="">-- select --</option>
+          <option value="with">with</option>
+          <option value="on">on</option>
+          <option value="to">to</option>
+          <option value="in">in</option>
+        </select>
+        <span>my colleagues at work.</span>
+      </div>
+
+      <div class="fill-box">
+        <span>2. We share hobbies; we have a lot</span>
+        <select id="chunk2">
+          <option value="">-- select --</option>
+          <option value="with">with</option>
+          <option value="in">in</option>
+          <option value="at">at</option>
+          <option value="on">on</option>
+        </select>
+        <span>common.</span>
+      </div>
+
+      <div class="fill-box">
+        <span>3. When I have a problem, I can always count</span>
+        <select id="chunk3">
+          <option value="">-- select --</option>
+          <option value="on">on</option>
+          <option value="for">for</option>
+          <option value="about">about</option>
+          <option value="in">in</option>
+        </select>
+        <span>my best friend.</span>
+      </div>
+
+      <div class="fill-box">
+        <span>4. Even after moving to another city, we try to keep</span>
+        <select id="chunk4">
+          <option value="">-- select --</option>
+          <option value="to">to</option>
+          <option value="with">with</option>
+          <option value="in">in</option>
+          <option value="on">on</option>
+        </select>
+        <span>touch.</span>
+      </div>
+
+      <div class="fill-box">
+        <span>5. A friend who is always ready to support you when you are in trouble is</span>
+        <select id="vocab1">
+          <option value="">-- select definition --</option>
+          <option value="supportive">supportive</option>
+          <option value="outgoing">outgoing</option>
+          <option value="talkative">talkative</option>
+        </select>
+        <span>.</span>
+      </div>
+    </section>
+
+    <!-- 3. GRAMMAR: COMPARATIVES -->
+    <section class="card">
+      <div class="card-header">
+        <div class="card-icon">3</div>
+        <div class="card-title">Grammar: Comparative Adjectives</div>
+      </div>
+      
+      <div>
+        <div class="formula-tag">Short Adjectives: adj + -er + than</div>
+        <div class="formula-tag">Long Adjectives: more + adj + than</div>
+      </div>
+
+      <div class="fill-box" style="margin-top: 10px;">
+        <span>1. My brother is</span>
+        <input type="text" id="g1" placeholder="(young)" style="width: 140px;">
+        <span>than me.</span>
+      </div>
+
+      <div class="fill-box">
+        <span>2. My best friend is</span>
+        <input type="text" id="g2" placeholder="(outgoing)" style="width: 170px;">
+        <span>than me.</span>
+      </div>
+
+      <div class="fill-box">
+        <span>3. My sister is</span>
+        <input type="text" id="g3" placeholder="(quiet)" style="width: 140px;">
+        <span>than my brother.</span>
+      </div>
+
+      <div class="fill-box">
+        <span>4. A teacher needs to be</span>
+        <input type="text" id="g4" placeholder="(patient)" style="width: 170px;">
+        <span>than a tourist.</span>
+      </div>
+    </section>
+
+    <!-- 4. WRITING TASK -->
+    <section class="card">
+      <div class="card-header">
+        <div class="card-icon">4</div>
+        <div class="card-title">Writing Production: Answer &bull; Explain &bull; Example</div>
+      </div>
+
+      <p style="font-weight: 600; color: #334155; margin-bottom: 6px;">Prompt: Describe someone important in your life (a family member or a friend).</p>
+      <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 12px;">
+        Use the 3-step expansion strategy:
+        <br><strong>Step 1:</strong> State who they are &amp; character trait (e.g., <em>supportive, reliable, outgoing</em>).
+        <br><strong>Step 2:</strong> Compare them with someone or explain why (e.g., <em>...more patient than...</em> / <em>I can count on...</em>).
+        <br><strong>Step 3:</strong> Give a specific everyday example (e.g., <em>For example, whenever I need help with...</em>).
+      </p>
+
+      <textarea id="writing-input" placeholder="Write your paragraph here (4-6 sentences)..."></textarea>
+      <div id="writing-hint" style="font-size: 0.85rem; color: #64748b; margin-top: 4px;">Words written: <span id="word-count">0</span></div>
+    </section>
+
+    <button type="button" class="btn-submit" onclick="checkAnswers()">Ödevi Tamamla ve Sonuçları Gör</button>
+  </form>
+
+  <!-- RESULT CARD -->
+  <div id="results-card" class="card">
+    <div class="score-banner" id="score-text"></div>
+    <div id="feedback-detail"></div>
+  </div>
+
+</div>
+
+<script>
+  // Word counter for writing
+  document.getElementById('writing-input').addEventListener('input', function() {
+    const text = this.value.trim();
+    const words = text ? text.split(/\s+/).length : 0;
+    document.getElementById('word-count').innerText = words;
+  });
+
+  function checkAnswers() {
+    let score = 0;
+    let total = 12; // 3 Reading + 5 Vocab/Chunk + 4 Grammar
+    let details = [];
+
+    // 1. Reading
+    const r1 = document.querySelector('input[name="rc1"]:checked')?.value;
+    const r2 = document.querySelector('input[name="rc2"]:checked')?.value;
+    const r3 = document.querySelector('input[name="rc3"]:checked')?.value;
+
+    if (r1 === 'B') score++; else details.push("Reading Q1: Doğru cevap 'They talk on the phone every week and keep in touch.'");
+    if (r2 === 'A') score++; else details.push("Reading Q2: Doğru cevap 'Yusuf is more outgoing than Adam.'");
+    if (r3 === 'C') score++; else details.push("Reading Q3: Doğru cevap 'Trust and mutual respect.'");
+
+    // 2. Chunks & Vocab
+    const c1 = document.getElementById('chunk1').value.toLowerCase().trim();
+    const c2 = document.getElementById('chunk2').value.toLowerCase().trim();
+    const c3 = document.getElementById('chunk3').value.toLowerCase().trim();
+    const c4 = document.getElementById('chunk4').value.toLowerCase().trim();
+    const v1 = document.getElementById('vocab1').value.toLowerCase().trim();
+
+    if (c1 === 'with') score++; else details.push("Vocabulary 1: 'get along well with'");
+    if (c2 === 'in') score++; else details.push("Vocabulary 2: 'have a lot in common'");
+    if (c3 === 'on') score++; else details.push("Vocabulary 3: 'count on'");
+    if (c4 === 'in') score++; else details.push("Vocabulary 4: 'keep in touch'");
+    if (v1 === 'supportive') score++; else details.push("Vocabulary 5: 'supportive'");
+
+    // 3. Grammar
+    const g1 = document.getElementById('g1').value.toLowerCase().trim();
+    const g2 = document.getElementById('g2').value.toLowerCase().trim();
+    const g3 = document.getElementById('g3').value.toLowerCase().trim();
+    const g4 = document.getElementById('g4').value.toLowerCase().trim();
+
+    if (g1 === 'younger') score++; else details.push("Grammar 1: 'younger' olmalıdır.");
+    if (g2 === 'more outgoing') score++; else details.push("Grammar 2: 'more outgoing' olmalıdır.");
+    if (g3 === 'quieter') score++; else details.push("Grammar 3: 'quieter' olmalıdır.");
+    if (g4 === 'more patient') score++; else details.push("Grammar 4: 'more patient' olmalıdır.");
+
+    // Writing Check
+    const writing = document.getElementById('writing-input').value.trim();
+    const wordCount = writing ? writing.split(/\s+/).length : 0;
+
+    // Show Results
+    const resCard = document.getElementById('results-card');
+    const scoreText = document.getElementById('score-text');
+    const feedbackDetail = document.getElementById('feedback-detail');
+
+    scoreText.innerText = `Skor: ${score} / ${total} (%${Math.round((score/total)*100)})`;
+
+    let html = "";
+    if (details.length === 0) {
+      html += "<p class='feedback-correct'>Tebrikler! Test ve alıştırma bölümlerinin tamamını doğru tamamladınız!</p>";
+    } else {
+      html += "<p style='color: #b91c1c; font-weight: 600; margin-bottom: 8px;'>Gözden Geçirilmesi Gereken Noktalar:</p><ul>";
+      details.forEach(d => {
+        html += `<li style='margin-left: 20px; color: #475569;'>${d}</li>`;
+      });
+      html += "</ul>";
+    }
+
+    html += "<hr style='margin: 15px 0; border: none; border-top: 1px solid #cbd5e1;'>";
+    html += "<p><strong>Yazma Bölümü Durumu:</strong> " + (wordCount >= 20 ? `<span class='feedback-correct'>Harika, ${wordCount} kelime yazdınız. Öğretmeniniz incelesin!</span>` : `<span class='feedback-wrong'>Yazınız ${wordCount} kelime. Lütfen en az 25-30 kelimelik bir paragraf oluşturmaya çalışın.</span>`) + "</p>";
+
+    feedbackDetail.innerHTML = html;
+    resCard.style.display = 'block';
+    resCard.scrollIntoView({ behavior: 'smooth' });
+  }
+</script>
+
+</body>
+</html>
