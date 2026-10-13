@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Reading &amp; Books – FieldEra Level 3 (A2) Interactive E-Book</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap">
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);--bg:#F2F7F9;--card:#fff;--ink:#14283C;--mute:#4A5F72;--teal:#0B6B78;--tealL:#CFE8EC;--amber:#F0B04A;--amberL:#FCEBCB;--plum:#6A3F7A;--plumL:#E9DDF0;--line:#B9CBD6;--ok:#17703A;--bad:#A02828}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0F1B27;--card:#172838;--ink:#EAF2F7;--mute:#A9BCCB;--teal:#6FD0DD;--tealL:#1B4550;--amber:#F0B04A;--amberL:#4A3A1C;--plum:#CDA6DD;--plumL:#3A2A47;--line:#35506A;--ok:#6FE09A;--bad:#FF9A9A}}
+:root[data-theme=dark]{--bg:#0F1B27;--card:#172838;--ink:#EAF2F7;--mute:#A9BCCB;--teal:#6FD0DD;--tealL:#1B4550;--amber:#F0B04A;--amberL:#4A3A1C;--plum:#CDA6DD;--plumL:#3A2A47;--line:#35506A;--ok:#6FE09A;--bad:#FF9A9A}
+html{height:auto;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px);scroll-behavior:smooth}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.6 "Atkinson Hyperlegible",Verdana,Arial,sans-serif}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--card);border-bottom:2px solid var(--line);display:flex;gap:4px;padding:8px 12px;overflow-x:auto}
+nav a{color:var(--ink);text-decoration:none;padding:8px 14px;border-radius:8px;white-space:nowrap;font-weight:700}
+nav a:hover{background:var(--tealL)}
+:focus-visible{outline:3px solid var(--plum);outline-offset:2px}
+main{max-width:860px;margin:auto;padding:0 16px 60px}
+header.cover{padding:36px 0 12px}
+h1{font-size:2.3rem;line-height:1.15;margin:.2em 0}
+h2{font-size:1.7rem;margin:1.6em 0 .3em;color:var(--teal)}
+h3{font-size:1.25rem;margin:1.3em 0 .3em}
+p.sub{color:var(--mute);margin:.2em 0}
+.sec{background:var(--card);border:2px solid var(--line);border-radius:14px;padding:18px 20px;margin:16px 0}
+figure{margin:16px 0;background:var(--card);border:2px solid var(--line);border-radius:14px;padding:12px}
+figure svg{width:100%;height:auto;display:block}
+figcaption{font-size:.95rem;color:var(--mute);padding:8px 6px 2px;border-top:1px dashed var(--line);margin-top:8px}
+svg text{font-family:inherit;fill:var(--ink)}
+.t{fill:var(--teal)}.am{fill:var(--amber)}.pl{fill:var(--plum)}.tl{fill:var(--tealL)}.aml{fill:var(--amberL)}.cd{fill:var(--card)}.st{stroke:var(--ink);stroke-width:2;fill:none}.w{fill:#fff!important}
+.g{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
+.v{background:var(--tealL);border-radius:10px;padding:10px 14px}
+.v b{font-size:1.15rem}.v i{display:block;color:var(--mute)}
+.goal{background:var(--amberL);border-left:6px solid var(--amber);padding:10px 14px;border-radius:8px;margin:12px 0}
+.think{background:var(--plumL);border-left:6px solid var(--plum);padding:10px 14px;border-radius:8px;margin:12px 0}
+textarea,input,select{font:inherit;color:var(--ink);background:var(--bg);border:2px solid var(--line);border-radius:8px;padding:8px}
+textarea{width:100%;box-sizing:border-box;min-height:90px}
+input.b{width:9.5em}
+button{font:inherit;font-weight:700;background:var(--teal);color:var(--bg);border:0;border-radius:8px;padding:9px 16px;cursor:pointer;min-height:44px}
+button.o{background:none;color:var(--teal);border:2px solid var(--teal)}
+.ok{color:var(--ok);font-weight:700}.no{color:var(--bad);font-weight:700}
+.fb{min-height:1.4em;margin:6px 0}
+.rv{display:none;background:var(--tealL);padding:8px 12px;border-radius:8px;margin:6px 0}
+.rv.on{display:block}
+ol.q li,ul.q li{margin:12px 0}
+.books{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.bk{border-radius:6px 12px 12px 6px;border-left:14px solid var(--teal);background:var(--card);border-top:2px solid var(--line);border-right:2px solid var(--line);border-bottom:2px solid var(--line);padding:10px 14px}
+.bk.b2{border-left-color:var(--amber)}.bk.b3{border-left-color:var(--plum)}
+details{background:var(--bg);border:2px solid var(--line);border-radius:10px;padding:8px 14px;margin:10px 0}summary{cursor:pointer;font-weight:700}
+.wb{background:var(--amberL);padding:8px 12px;border-radius:8px;font-weight:700}
+a.btn{display:inline-block;font-weight:700;background:var(--teal);color:var(--bg);text-decoration:none;border-radius:8px;padding:10px 18px;min-height:24px}a.btn:hover{text-decoration:underline}.vid{border-left:6px solid var(--teal)}</style></head>
+<body>
+<nav aria-label="Chapters"><a href="#top">Start</a><a href="#c1">1 Words</a><a href="#c2">2 Reading &amp; grammar</a><a href="#c3">3 Speaking</a><a href="#ans">Answers</a><button class="o" id="th" aria-label="Toggle dark or light theme">Theme</button></nav>
+<main id="top">
+<header class="cover"><p class="sub">FieldEra · Level 3 (A2)</p><h1>Reading &amp; Books</h1>
+<p class="sub">Read each chapter in order. Look at the pictures first, then read, then do the activities. Say your answers aloud.</p></header>
+
+<section id="c1"><h2>Chapter 1 · Words for talking about books</h2>
+<div class="goal"><b>You will learn:</b> 8 key words and 6 phrases to talk about what you read.</div>
+<div class="think"><b>Warm-up (talk or write):</b> What do you usually read – books, news, social media, blogs? When and where do you like to read?<textarea aria-label="Warm-up answer"></textarea></div>
+
+<figure><svg viewBox="0 0 640 210" role="img" aria-labelledby="f1t f1d"><title id="f1t">Fiction and non-fiction</title><desc id="f1d">Two books. A teal book labelled fiction shows a star and the words novel and mystery. An amber book labelled non-fiction shows a globe and the words history, biography and science.</desc>
+<rect x="40" y="20" width="240" height="170" rx="8" class="tl st"/><rect x="40" y="20" width="26" height="170" class="t"/>
+<path d="M170 50l9 20 22 2-17 14 5 22-19-12-19 12 5-22-17-14 22-2z" class="am st"/>
+<text x="90" y="125" font-size="22" font-weight="700">fiction</text><text x="90" y="150" font-size="15">imagined stories</text><text x="90" y="172" font-size="15">novel · mystery</text>
+<rect x="360" y="20" width="240" height="170" rx="8" class="aml st"/><rect x="360" y="20" width="26" height="170" class="am"/>
+<circle cx="490" cy="75" r="26" class="cd st"/><ellipse cx="490" cy="75" rx="11" ry="26" class="st"/><path d="M464 75h52" class="st"/>
+<text x="410" y="125" font-size="22" font-weight="700">non-fiction</text><text x="410" y="150" font-size="15">real facts</text><text x="410" y="172" font-size="15">history · biography</text>
+<text x="320" y="110" font-size="30" text-anchor="middle">≠</text></svg>
+<figcaption><b>Figure 1.</b> Fiction is imagined; non-fiction is real. Use this contrast when you answer “What do you read?”</figcaption></figure>
+
+<figure><svg viewBox="0 0 640 220" role="img" aria-labelledby="f2t f2d"><title id="f2t">Book words map</title><desc id="f2d">A library gives a book to you with the arrow label borrow. A friend gives you advice with the arrow label recommend. Inside the open book are three chapters and a character.</desc>
+<rect x="215" y="25" width="210" height="130" rx="8" class="cd st"/><path d="M320 25v130" class="st"/>
+<rect x="232" y="45" width="75" height="14" class="t"/><text x="232" y="78" font-size="13">chapter 1</text><rect x="232" y="88" width="75" height="14" class="am"/><text x="232" y="121" font-size="13">chapter 2</text>
+<circle cx="372" cy="70" r="14" class="pl"/><path d="M372 84v34M350 98h44M372 118l-14 22M372 118l14 22" class="st"/><text x="372" y="165" font-size="15" text-anchor="middle" font-weight="700">character</text>
+<rect x="10" y="60" width="110" height="60" rx="8" class="tl st"/><text x="65" y="95" font-size="17" text-anchor="middle">library</text>
+<path d="M122 90h86" class="st"/><path d="M208 90l-12-7v14z" class="t"/><text x="165" y="80" font-size="15" text-anchor="middle" font-weight="700">borrow</text>
+<rect x="520" y="60" width="110" height="60" rx="8" class="aml st"/><text x="575" y="95" font-size="17" text-anchor="middle">friend</text>
+<path d="M518 90h-86" class="st"/><path d="M432 90l12-7v14z" class="t"/><text x="475" y="80" font-size="15" text-anchor="middle" font-weight="700">recommend</text>
+<text x="320" y="200" font-size="15" text-anchor="middle">fiction or non-fiction? interesting? useful?</text></svg>
+<figcaption><b>Figure 2.</b> How the key words connect: you <i>borrow</i> a book, a friend <i>recommends</i> it, and each book has <i>chapters</i> and <i>characters</i>.</figcaption></figure>
+
+<h3>Core vocabulary (Turkish meaning in italics)</h3><div class="g" id="vg"></div>
+<h3>Useful phrases</h3><div class="g" id="pg"></div>
+
+<div class="sec vid"><h3 style="margin-top:0">Watch: Video 1</h3><p>Watch the video (it starts at 0:48). It opens on YouTube in a new tab.</p><a class="btn" href="https://www.youtube.com/watch?v=X1L1Hd3xfrU&amp;t=48s" target="_blank" rel="noopener">Open Video 1 on YouTube (opens in a new tab)</a><p><b>Watch and answer:</b> Which words from this chapter did you hear? Write 2 words and 1 new word.</p><textarea aria-label="Video 1 notes"></textarea></div>
+<h3>Practice: fill the gaps</h3><div class="wb">fiction · non-fiction · chapter · character · borrow · recommend · interesting · useful</div>
+<ol class="q" id="p1"></ol><button id="ck1">Check answers</button><div class="fb" id="f1" role="status"></div>
+<div class="think"><b>Make it personal:</b> Write 3 sentences about your reading habits. Read them to a partner and ask one follow-up question, for example: “What kind of non-fiction do you prefer?”<textarea aria-label="My three sentences"></textarea></div></section>
+
+<section id="c2"><h2>Chapter 2 · Reading &amp; grammar in context</h2>
+<div class="goal"><b>You will learn:</b> to read a short text and to use <i>enjoy</i>, <i>like</i> and <i>prefer</i> correctly.</div>
+<figure><svg viewBox="0 0 640 190" role="img" aria-labelledby="f3t f3d"><title id="f3t">Yusuf's evening routine</title><desc id="f3d">Before: a phone, hours of scrolling after work, feeling tired. After: a book, ten minutes after dinner, feeling relaxed.</desc>
+<rect x="20" y="15" width="270" height="160" rx="10" class="aml st"/><text x="40" y="45" font-size="18" font-weight="700">Before</text>
+<rect x="45" y="60" width="50" height="90" rx="8" class="cd st"/><circle cx="70" cy="140" r="3" class="t"/><text x="110" y="95" font-size="16">hours of scrolling</text><text x="110" y="120" font-size="16">after work</text><text x="110" y="148" font-size="16" font-weight="700">= tired</text>
+<path d="M300 95h40" class="st"/><path d="M342 95l-12-8v16z" class="t"/>
+<rect x="350" y="15" width="270" height="160" rx="10" class="tl st"/><text x="370" y="45" font-size="18" font-weight="700">After</text>
+<rect x="372" y="62" width="70" height="86" rx="4" class="t"/><rect x="380" y="62" width="62" height="86" class="cd st"/><path d="M390 85h42M390 100h42M390 115h30" class="st"/>
+<text x="458" y="95" font-size="16">10 minutes</text><text x="458" y="120" font-size="16">after dinner</text><text x="458" y="148" font-size="16" font-weight="700">= relaxed</text></svg>
+<figcaption><b>Figure 3.</b> Yusuf’s change. Use it to retell the story: <i>He used to… Now he…</i></figcaption></figure>
+<div class="sec"><h3>Reading: Yusuf’s New Reading Habit</h3>
+<p>Yusuf works in a busy office in Istanbul. After a long workday, he used to spend hours scrolling through social media on his phone. However, he often felt tired and unrefreshed in the evenings. Last month, Yusuf decided to build a healthier evening routine. Instead of looking at his phone screen after dinner, he decided to read a physical book for just 10 minutes.</p>
+<p>He started with a light fiction novel that has very short chapters. Because the chapters are brief, he feels a sense of progress every time he finishes one. Reading for 10 minutes helps him relax and disconnect from his daily work stress. Now, reading is his favourite part of the evening. He often recommends his favourite books to a friend at work, and they enjoy discussing different characters over lunch.</p></div>
+<h3>Comprehension check</h3><ol class="q" id="cc"></ol>
+<div class="think"><b>Talk about it:</b> Is 10 minutes a day a good way to start a habit? Why or why not? Do you prefer short or long chapters?</div>
+<div class="think"><b>Summary challenge:</b> Cover the text. Write 3–4 sentences using: office/phone · 10 minutes/after dinner · short chapters/relax · recommend/friend.<textarea aria-label="My summary"></textarea></div>
+
+<figure><svg viewBox="0 0 640 230" role="img" aria-labelledby="f4t f4d"><title id="f4t">Enjoy, like and prefer</title><desc id="f4d">Enjoy has one arrow to verb plus ing. Like has two arrows, to verb plus ing and to plus base verb. Prefer shows a balance: reading on one side, to, watching TV on the other.</desc>
+<text x="20" y="40" font-size="20" font-weight="700">enjoy</text><path d="M110 34h150" class="st"/><path d="M262 34l-12-7v14z" class="t"/><rect x="270" y="14" width="150" height="40" rx="8" class="tl st"/><text x="345" y="40" font-size="18" text-anchor="middle">+ verb-ing</text><text x="440" y="40" font-size="15" class="no" fill="var(--bad)">✗ enjoy to read</text>
+<text x="20" y="110" font-size="20" font-weight="700">like</text><path d="M110 104l150-24" class="st"/><path d="M110 104l150 24" class="st"/><rect x="270" y="60" width="150" height="40" rx="8" class="tl st"/><text x="345" y="86" font-size="18" text-anchor="middle">+ verb-ing</text><rect x="270" y="112" width="150" height="40" rx="8" class="aml st"/><text x="345" y="138" font-size="18" text-anchor="middle">+ to + verb</text><text x="440" y="118" font-size="15" fill="var(--ok)">✓ both are correct</text>
+<text x="20" y="205" font-size="20" font-weight="700">prefer</text><path d="M110 215h360M290 215v-18" class="st"/><rect x="120" y="170" width="130" height="34" rx="8" class="tl st"/><text x="185" y="193" font-size="16" text-anchor="middle">reading</text><text x="290" y="190" font-size="20" font-weight="700" text-anchor="middle" fill="var(--teal)">to</text><rect x="330" y="170" width="140" height="34" rx="8" class="aml st"/><text x="400" y="193" font-size="16" text-anchor="middle">watching TV</text><text x="490" y="193" font-size="15" fill="var(--bad)">✗ not “than”</text></svg>
+<figcaption><b>Figure 4.</b> Grammar map. <i>Enjoy</i> needs -ing. <i>Like</i> allows two forms. <i>Prefer</i> compares two things with <i>to</i>.</figcaption></figure>
+<h3>Grammar practice</h3><ol class="q" id="gp"></ol>
+<div class="think"><b>Speaking task:</b> Ask your partner: “Do you prefer reading physical books to reading on a phone or tablet?” Answer: “I prefer… because…”</div></section>
+
+<section id="c3"><h2>Chapter 3 · Speaking practice</h2>
+<div class="goal"><b>You will learn:</b> to give longer answers with A-R-E-Q and to role-play a bookshop conversation.</div>
+<h3>Say it aloud: finish the sentences with your own ideas</h3>
+<ul class="q"><li><i>I enjoy reading…</i></li><li><i>I usually read in/at…</i></li><li><i>I prefer… to…</i></li><li><i>Reading helps me…</i></li></ul>
+<figure><svg viewBox="0 0 640 220" role="img" aria-labelledby="f5t f5d"><title id="f5t">A-R-E-Q steps</title><desc id="f5d">A four-step staircase. A is Answer, R is Reason, E is Example, Q is Question. The steps get higher as the answer grows.</desc>
+<rect x="20" y="150" width="140" height="60" class="tl st"/><rect x="170" y="110" width="140" height="100" class="aml st"/><rect x="320" y="70" width="140" height="140" class="tl st"/><rect x="470" y="30" width="150" height="180" class="aml st"/>
+<text x="90" y="178" font-size="26" font-weight="700" text-anchor="middle">A</text><text x="90" y="200" font-size="14" text-anchor="middle">Answer</text>
+<text x="240" y="150" font-size="26" font-weight="700" text-anchor="middle">R</text><text x="240" y="172" font-size="14" text-anchor="middle">Reason</text>
+<text x="390" y="115" font-size="26" font-weight="700" text-anchor="middle">E</text><text x="390" y="137" font-size="14" text-anchor="middle">Example</text>
+<text x="545" y="75" font-size="26" font-weight="700" text-anchor="middle">Q</text><text x="545" y="97" font-size="14" text-anchor="middle">Question back</text></svg>
+<figcaption><b>Figure 5.</b> Each step makes your answer longer and keeps the talk going.</figcaption></figure>
+<div class="sec"><b>Model.</b> “Do you enjoy reading fiction?” <b>(A)</b> Yes, I really enjoy reading fiction. <b>(R)</b> It helps me escape daily stress and builds my imagination. <b>(E)</b> For example, I recently read a mystery novel set in London. <b>(Q)</b> What about you, do you like mystery stories?</div>
+<div class="think"><b>Try it:</b> Answer “Do you prefer print books or e-books?” with all four steps.<textarea aria-label="My A-R-E-Q answer"></textarea></div>
+
+<h3>Role play: at the bookshop (Round 1 – guided)</h3>
+<figure><div class="books" role="list" aria-label="Three fictional books">
+<div class="bk" role="listitem"><b>A · A New Neighbour</b><br>Fiction · Mystery<br>Short chapters<br>180 pages</div>
+<div class="bk b2" role="listitem"><b>B · Small Steps</b><br>Non-fiction · Self-improvement<br>10-minute daily tips<br>150 pages</div>
+<div class="bk b3" role="listitem"><b>C · Journeys Close to Home</b><br>Non-fiction · Travel stories<br>Easy vocabulary<br>200 pages</div></div>
+<figcaption><b>Figure 6.</b> The shop’s three fictional books. Compare genre, chapter style and length to choose.</figcaption></figure>
+<div class="g"><div class="sec"><b>Student A: Customer</b><br>You want a short, relaxing book for after work or school. Ask for a recommendation, ask about chapter length, decide which book to buy.</div>
+<div class="sec"><b>Student B: Bookseller</b><br>Ask what the customer likes, recommend one book, explain <i>why</i> it fits, and say the length or price.</div></div>
+<h3>Round 2 – fluency (keywords only, no full sentences)</h3>
+<p><b>Customer:</b> interest → daily time → ask price/length.<br><b>Bookseller:</b> ask habit → recommend title → reason.</p>
+<h3>Problem solving</h3>
+<p>“I really want to read more books, but I have very little time every day.” Tick the <b>best two</b> solutions, then explain why to your group.</p>
+<div id="ps"></div><div class="fb" id="psf" role="status"></div>
+<div class="think"><b>Final task:</b> Make a plan for a busy friend: one type of book and a simple 10-minute daily schedule.<textarea aria-label="My plan"></textarea></div>
+<div class="think"><b>Unexpected twist:</b> Your friend says, “I prefer reading on my phone, but social media notifications keep distracting me!” Change your advice to solve this.<textarea aria-label="My new advice"></textarea></div>
+<div class="sec vid"><h3 style="margin-top:0">Watch: Video 2</h3><p>Watch the video, then use A-R-E-Q to tell a partner what you think about it.</p><a class="btn" href="https://www.youtube.com/watch?v=d0yGdNEWdn0" target="_blank" rel="noopener">Open Video 2 on YouTube (opens in a new tab)</a><p><b>Watch and answer:</b> What is the video about? Is it interesting or useful? Why?</p><textarea aria-label="Video 2 notes"></textarea></div>
+<h3>Self-assessment</h3>
+<div class="sec"><label><input type="checkbox" class="sa"> I can use reading vocabulary (fiction, chapter, recommend).</label><br><label><input type="checkbox" class="sa"> I can say preferences with <i>enjoy -ing</i> and <i>prefer … to …</i>.</label><br><label><input type="checkbox" class="sa"> I can give longer answers with A-R-E-Q.</label><div class="fb" id="saf" role="status"></div></div></section>
+
+<section id="ans"><h2>Answer key &amp; model responses</h2>
+<details><summary>Chapter 1 – practice answers</summary><p>1 recommend · 2 non-fiction · 3 chapter · 4 character · 5 borrow</p></details>
+<details><summary>Chapter 2 – comprehension &amp; grammar</summary><p>Comprehension: see the “Show answer” buttons. Grammar: 1 reading · 2 reading (prefer reading <i>to</i> reading) · 3 both are correct · 4 borrowing (prefer borrowing <i>to</i> buying).</p></details>
+<details><summary>Model summary</summary><p>Yusuf works in a busy office and used to spend hours on his phone every evening. To create a healthier routine, he started reading a light fiction book for 10 minutes after dinner. The short chapters help him relax and disconnect from stress. Now, he loves recommending his favourite books to a friend at work.</p></details>
+<details><summary>Model bookshop dialogue</summary><p><b>Bookseller:</b> Hello! How can I help you find a book today?<br><b>Customer:</b> Hi! I’m looking for something light to read after work. I don’t have much time, so I prefer books with short chapters.<br><b>Bookseller:</b> I recommend <i>Small Steps</i>. It is a non-fiction book with quick 10-minute daily tips. It’s very practical and easy to read.<br><b>Customer:</b> That sounds great! How long is the book?<br><b>Bookseller:</b> It is only 150 pages long.<br><b>Customer:</b> Perfect, I’ll take it. Thank you!</p></details>
+</section></main>
+<script>
+const $=s=>document.querySelector(s);
+const V=[["fiction","kurgu / roman","She enjoys reading fiction before going to sleep."],["non-fiction","kurgu dışı","History and biography are popular categories of non-fiction."],["chapter","bölüm (kitap)","I am currently reading the third chapter of this novel."],["character","karakter / kişilik","The main character in the story moves to a new city."],["borrow","ödünç almak","Can I borrow your book for a week?"],["recommend","tavsiye etmek","Which book do you recommend for beginners?"],["interesting","ilgi çekici","This article contains many interesting facts."],["useful","faydalı / kullanışlı","Learning new vocabulary is very useful for everyday communication."]];
+$("#vg").innerHTML=V.map(v=>`<div class="v"><b>${v[0]}</b><i lang="tr">${v[1]}</i>${v[2]}</div>`).join("");
+const P=[["I enjoy reading…","… okumaktan keyif alırım","I enjoy reading short stories on weekends."],["I usually read…","Genellikle … okurum","I usually read news articles on my commute."],["I prefer… to…","…’yi …’ye tercih ederim","I prefer reading print books to reading on a screen."],["It helps me…","Bana … konusunda yardımcı olur","Reading before bed helps me relax after work."],["It is about…","… hakkındadır","This novel is about a detective solving mysteries."],["My favourite part is…","En sevdiğim kısım …","My favourite part is when the main character finds the hidden letter."]];
+$("#pg").innerHTML=P.map(v=>`<div class="v"><b>${v[0]}</b><i lang="tr">${v[1]}</i>${v[2]}</div>`).join("");
+const G=[["My friend gave me a great book; I really want to","recommend","it to you."],["I prefer","non-fiction","books because I like learning about real history and science."],["Every night, I read one short","chapter","of my novel before turning off the light."],["Sherlock Holmes is a famous fictional","character","created by Arthur Conan Doyle."],["You don't need to buy that book; you can","borrow","it from the local library."]];
+$("#p1").innerHTML=G.map(g=>`<li>${g[0]} <input class="b" data-a="${g[1]}" aria-label="gap" autocomplete="off"> ${g[2]}</li>`).join("");
+$("#ck1").onclick=()=>{let n=0;document.querySelectorAll("#p1 input").forEach(i=>{const r=i.value.trim().toLowerCase()===i.dataset.a;n+=r;i.style.borderColor=r?"var(--ok)":"var(--bad)"});$("#f1").innerHTML=`<span class="${n==5?"ok":"no"}">${n} / 5 correct${n<5?" – check the red boxes and try again.":" – great work!"}</span>`};
+const C=[["What did Yusuf usually do after work before his new habit?","He spent hours scrolling through social media on his phone."],["How long does he read every evening, and what book did he choose?","10 minutes. A light fiction novel with short chapters."],["Why does he prefer short chapters?","Finishing one gives him a sense of progress, and it helps him relax."]];
+$("#cc").innerHTML=C.map((c,i)=>`<li>${c[0]}<br><button class="o" data-i="${i}" aria-expanded="false">Show answer</button><div class="rv" id="rv${i}">${c[1]}</div></li>`).join("");
+document.querySelectorAll("#cc button").forEach(b=>b.onclick=()=>{const r=$("#rv"+b.dataset.i);const on=r.classList.toggle("on");b.setAttribute("aria-expanded",on);b.textContent=on?"Hide answer":"Show answer"});
+const Q=[["Yusuf enjoys ___ short stories in the evening.",["reading","to read"],[0]],["I prefer reading print books to ___ e-books on a tablet.",["reading","read","to read"],[0]],["My sister likes ___ about history. (choose all correct)",["to learn","learning"],[0,1]],["Do you prefer ___ books from a library or buying them?",["borrowing","borrow"],[0]]];
+$("#gp").innerHTML=Q.map((q,i)=>`<li>${q[0]}<br>${q[1].map((o,j)=>`<label><input type="checkbox" data-q="${i}" data-j="${j}"> ${o}</label> `).join("")}<div class="fb" id="gq${i}" role="status"></div></li>`).join("");
+document.querySelectorAll("#gp input").forEach(c=>c.onchange=()=>{const i=+c.dataset.q,s=[...document.querySelectorAll(`[data-q="${i}"]`)].filter(x=>x.checked).map(x=>+x.dataset.j);const ok=s.length==Q[i][2].length&&s.every(x=>Q[i][2].includes(x));$("#gq"+i).innerHTML=s.length?`<span class="${ok?"ok":"no"}">${ok?"Correct ✓":"Not yet – think about the grammar map (Figure 4)."}</span>`:""});
+const S=["Read 5–10 pages every night before sleeping.","Listen to audiobooks while travelling or commuting.","Read short online articles instead of full novels.","Carry a small book in your bag at all times."];
+$("#ps").innerHTML=S.map(s=>`<label><input type="checkbox" class="pc"> ${s}</label><br>`).join("");
+document.querySelectorAll(".pc").forEach(c=>c.onchange=()=>{const k=[...document.querySelectorAll(".pc")].filter(x=>x.checked).length;$("#psf").innerHTML=k==2?'<span class="ok">Two chosen. Now explain why to your group.</span>':k>2?'<span class="no">Choose only two.</span>':""});
+document.querySelectorAll(".sa").forEach(c=>c.onchange=()=>{const k=[...document.querySelectorAll(".sa")].filter(x=>x.checked).length;$("#saf").textContent=k==3?"Great! You are ready for the next chapter.":k+" of 3 ticked."});
+$("#th").onclick=()=>{const d=document.documentElement,dark=d.dataset.theme?d.dataset.theme=="dark":matchMedia("(prefers-color-scheme:dark)").matches;d.dataset.theme=dark?"light":"dark"};
+</script></body></html>
